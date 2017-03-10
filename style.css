@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.body-container {
+    background-color: #efefef;
+    width: 100%;
+    height: 100vh;
+}
+
+.body-container:before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    left: 0px;
+    height: 100vh;
+    background-color: #4b21ff
+}
+.body-container:after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    background-image: url(http://www.clker.com/cliparts/d/c/a/4/1327935570682975743missing+person+2009+sundance+portrait+session+69bu7cew6b0l.jpg);
+    height: 500px;
+    top: 17%;
+    width: 500px;
+}
+
+.left-part {
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left-part h1, .social span{
+	color: black;
+}
