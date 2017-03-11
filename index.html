@@ -6,25 +6,71 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700" rel="stylesheet" type="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://www.mattboldt.com/demos/typed-js/js/typed.custom.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <script>
+    $(function() {
+        $(".animate-text").typed({
+            strings: ["UX/UI Developement", "Frontend Developement "],
+            typeSpeed: 50,
+            backSpeed: 50,
+            startDelay: 0,
+            backDelay: 500,
+            loop: false,
+            loopCount: false,
+            attr: null
+        });
+    });
+    </script>
 </head>
 
 <body>
     <div class="body-container">
+        <label>
+            <input type='checkbox'>
+            <span class='menu'>
+                        <span class='hamburger'></span>
+            </span>
+            <ul>
+                <li>
+                    <a href='#'>Home</a>
+                </li>
+                <li>
+                    <a href='#'>About</a>
+                </li>
+                <li>
+                    <a href='#'>Work</a>
+                </li>
+            </ul>
+        </label>
         <div class="left-bar">
             <div class="address-container">
-                <h1 class="logo">Vivek</h1>
+                <div class="logo">
+                    <h1 class="logo-box">
+                        Vivek Singh
+                    </h1>
+                </div>
                 <div class="social-block">
                     <p>E-Mail Id:
                         <br/> viveksinghup.singh@gmail.com</p>
                     <p>Mobile No:
                         <br/> +91 8506817383</p>
                     <div class="social-link">
-                    <p>Find Me on: </p>
+                        <p>Find Me on: </p>
                         <ul class="list">
-                            <li><a href="#"><img src="icons/linkedin.png"></a></li>
-                            <li><a href="#"><img src="icons/facebook.png"></a></li>
-                            <li><a href="#"><img src="icons/twitter.png"></a></li>
-                            <li><a href="#"><img src="icons/instagram.png"></a></li>
+                            <li>
+                                <a target="_blank" href="https://www.linkedin.com/in/viveksinghup"><img src="icons/linkedin.png" alt="image-icon"></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com/vivekamethi"><img src="icons/facebook.png" alt="image-icon"></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://twitter.com/viveksinghup"><img src="icons/twitter.png" alt="image-icon"></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com/viveksinghup/"><img src="icons/instagram.png" alt="image-icon"></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -34,10 +80,11 @@
             <div class="img"><img src="vivek.jpg" alt="Vivek Singh"></div>
             <div class="info-container">
                 <div class="details-box">
-                    <h1>Vivek<br/><span>Singh</span></h1>
-                    <p class="title">Sr. Frontend Developer</p>
-                    <small class="desc">hjfghjkfghj fghj678gh fghgh rtyu vghb hjfghjkfghj fghj678gh fghgh rtyu vghb hjfghjkfghj fghj678gh fghgh rtyu vghb hjfghjkfghj fghj678gh fghgh rtyu vghb</small>
-                    <div class="links"><a href="#">Portfolio</a><a href="#">Portfolio</a></div>
+                    <h1>Vivek Singh</h1>
+                    <br/><span>I work in <span class="title animate-text"></span></span>
+                    <!-- <p class="title">Sr. Frontend Developer</p> -->
+                    <small class="desc">I am the type of person who wants to push what is current and create new and innovative things and bring them to the masses. I always keep up to date with any new trends and try to push myself to always strive to be the best.</small>
+                    <div class="links"><a target="_blank" href="https://www.linkedin.com/in/viveksinghup">Linked In</a><a target="_blank" href="https://viveksinghup.herokuapp.com">Portfolio</a></div>
                 </div>
             </div>
         </div>

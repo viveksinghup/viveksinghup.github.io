@@ -7,7 +7,7 @@ body {
 .body-container {
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: #f9f9f9;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -18,7 +18,7 @@ body {
     content: '';
     width: 30%;
     height: 100vh;
-    background-color: #4b21ff;
+    background-color: #673AB7;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -46,6 +46,8 @@ body {
 .left-bar .address-container h1 {
     margin: 0px;
     color: white;
+    font-size: 40px;
+    font-family: 'Great Vibes', cursive;
 }
 
 .body-container .right-bar {
@@ -54,17 +56,109 @@ body {
     justify-content: space-between;
     flex-flow: row wrap;
 }
+label .menu {
+      position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+    cursor: pointer;
+}
+label .hamburger {
+  position: absolute;
+    top: 50px;
+    left: 37px;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+label .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+label .hamburger:before {
+  top: -10px;
+}
+label .hamburger:after {
+  bottom: -10px;
+}
+label input {
+  display: none;
+}
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
+  border-radius: 0;
+}
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  bottom: 0;
+}
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+}
+label input:checked + .menu + ul {
+  opacity: 1;
+}
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .25s 0s ease-in-out;
+  transition: .25s 0s ease-in-out;
+}
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
 
-.social-block p{
+.logo {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.social-block p {
     margin: 0px;
     margin-bottom: 15px;
     color: white;
     font-weight: 300;
     line-height: 1.8;
 }
-.social-link p{
+
+.social-link p {
     margin-bottom: 0px;
 }
+
 .right-bar .img {
     z-index: 10;
     width: 50%;
@@ -95,31 +189,35 @@ body {
     font-size: 40px;
     margin: 0px;
     color: black;
-}
-
-.info-container h1 span {
-    color: #4b21ff;
     position: relative;
+    font-weight: 600;
 }
 
-.info-container h1 span:before {
+.info-container h1:before {
     content: '';
     position: absolute;
-    left: -100%;
+    left: -90px;
     height: 4px;
     width: 80px;
     top: 20px;
-    background-color: #4b21ff;
+    background-color: #673AB7;
 }
 
 .details-box {
     padding: 10%;
 }
 
+.info-container .animate-text, .info-container span {
+    color: #673AB7;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .desc {
     display: block;
     line-height: 2;
     color: gray;
+    margin-top: 30px;
 }
 
 .links {
@@ -133,13 +231,18 @@ body {
     display: block;
     padding: 20px 50px;
     border-radius: 35px;
-    border: 2px solid #4b21ff;
+    border: 1px solid #673AB7;
     text-decoration: none;
-    color: #4b21ff;
+    color: #673AB7;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    box-shadow: -3px 3px 13px 0 #673AB7;
 }
 
 .links a:first-child {
-    background-color: #4b21ff;
+    background-color: #673AB7;
     color: white;
     margin-right: 30px;
 }
@@ -156,6 +259,38 @@ ul.list {
 ul.list li {
     list-style: none;
 }
-ul.list li a{
+
+ul.list li a {
     display: block;
+}
+
+.typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
