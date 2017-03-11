@@ -63,11 +63,11 @@ label .menu {
     z-index: 100;
     width: 100px;
     height: 100px;
-    background: #fff;
+    background: #f9f9f9;
     border-radius: 50% 50% 50% 50%;
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+    box-shadow: 0 0 0 0 #f9f9f9, 0 0 0 0 #f9f9f9;
     cursor: pointer;
 }
 label .hamburger {
@@ -103,7 +103,7 @@ label input {
   display: none;
 }
 label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
+  box-shadow: 0 0 0 100vw #f9f9f9, 0 0 0 100vh #f9f9f9;
   border-radius: 0;
 }
 label input:checked + .menu .hamburger {
